@@ -1,0 +1,18 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+alias grep="grep --color=ALWAYS"
+alias ls="ls -hp --color"
+
+set -o vi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+export	WORKON_HOME=$HOME/.virtualenvs
+source /bin/virtualenvwrapper_lazy.sh
