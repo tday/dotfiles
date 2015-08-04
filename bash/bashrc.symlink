@@ -16,3 +16,7 @@ set -o vi
 # User specific aliases and functions
 export	WORKON_HOME=$HOME/.virtualenvs
 source /bin/virtualenvwrapper_lazy.sh
+
+# Set the editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
