@@ -468,7 +468,7 @@ map <leader>g :GundoToggle<CR>
 " Python Mode
 "
 set nofoldenable
-let g:pymode_rope = 0
+let g:pymode_rope = 1
 
 " Documentation
 let g:pymode_doc = 1
