@@ -6,7 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 alias grep="grep --color=ALWAYS"
-alias ls="ls -hp --color"
+alias ls="ls -hpG"
 
 set -o vi
 
