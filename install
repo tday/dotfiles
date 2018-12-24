@@ -141,6 +141,7 @@ install_tools () {
     set -e
 
     find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 }
 
 setup_gitconfig
