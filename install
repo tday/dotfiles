@@ -136,18 +136,16 @@ install_dotfiles () {
   done
 }
 
-install_brew_if_needed () {
-    brew_exists=`command_exists brew echo`
-    if [ $brew_exists -eq 0 ]; then
-        echo "installing brew"
-    fi 
-}
-
 install_tools () {
     info 'installing tools'
     set -e
 
-    find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+    find . -name install.sh | while read installer ; do 
+        dir=`dirname ${installer}`
+        pushd $dir
+        sh -c "./install.sh"
+        popd
+    done
 }
 
 setup_gitconfig

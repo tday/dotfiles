@@ -4,3 +4,7 @@ command -v brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.
 
 # casks
 brew cask install spectacle
+
+# brews
+brew install diff-so-fancy
+brew install git
