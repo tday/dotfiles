@@ -25,28 +25,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Handle Bundles
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
-filetype off
-
-set rtp^=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-" required! 
-Plugin 'gmarik/Vundle.vim'
-
-" Installed plugins
-Plugin 'Python-mode-klen'
-Plugin 'Gundo'
-
-call vundle#end()
-"
-" The rest of your config follows here
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable white space characters
@@ -454,40 +432,3 @@ set tags=tags;/TAGS,tags,TAGS,/usr/include/tags
 " colorscheme.
 hi Pmenu guibg=purple guifg=white
 hi PmenuSel guibg=white guifg=purple gui=bold
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"
-" Gundo
-"
-map <leader>g :GundoToggle<CR>
-
-"
-" Python Mode
-"
-set nofoldenable
-let g:pymode_rope = 1
-
-" Documentation
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
-
-"Linting
-let g:pymode_lint = 1
-let g:pymode_lint_checkers = ["pep8"]
-let g:pymode_lint_ignore = "E501,E302,E127,E126,E128,E129,E231,E265"
-
-" Support virtualenv
-let g:pymode_virtualenv = 1
-
-" Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
-
-" syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
