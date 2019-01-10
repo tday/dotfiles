@@ -70,6 +70,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 set -o vi
 
 # nvm
