@@ -1,0 +1,31 @@
+[push]
+    default = current
+[core]
+    excludesfile = ~/.gitignore
+    pager = diff-so-fancy | less --tabs=1,5 -R
+[pager]
+    branch = false
+[merge]
+    tool = meld
+[color]
+    ui = always
+[color "diff"]
+    meta = yellow bold
+    commit = green bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = "red bold 52"
+    newNormal = "green bold"
+    newHighlight = "green bold 22"
+[user]
+    email = ayang@atomic.vc
+    name = ayang
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
