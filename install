@@ -148,9 +148,9 @@ install_tools () {
     done
 }
 
-setup_gitconfig
 install_tools
 install_dotfiles
+setup_gitconfig
 
 echo ''
 echo '  All installed!'
