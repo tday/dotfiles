@@ -1,31 +1,35 @@
 [push]
-    default = current
+  default = current
+  autoSetupRemote = true
 [core]
-    excludesfile = ~/.gitignore
-	pager = /opt/homebrew/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+  excludesfile = ~/.gitignore
+  pager = /opt/homebrew/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
 [pager]
-    branch = false
+  branch = false
 [merge]
-    tool = meld
+  tool = meld
 [color]
-    ui = always
+  ui = always
 [color "diff"]
-    meta = yellow bold
-    commit = green bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-    whitespace = red reverse
+  meta = yellow bold
+  commit = green bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
 [color "diff-highlight"]
-    oldNormal = red bold
-    oldHighlight = "red bold 52"
-    newNormal = "green bold"
-    newHighlight = "green bold 22"
+  oldNormal = red bold
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlight = "green bold 22"
 [user]
-    email = alan@rayfit.com
-    name = Alan Yang
+  email = alan@rayfit.com
+  name = Alan Yang
 [filter "lfs"]
-    required = true
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[alias]
+    delete-local-merged = "!git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D"
