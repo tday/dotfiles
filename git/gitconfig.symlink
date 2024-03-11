@@ -32,4 +32,4 @@
   process = git-lfs filter-process
 
 [alias]
-    delete-local-merged = "!git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D"
+    delete-local-merged = "!git fetch -p && git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D"
